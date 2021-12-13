@@ -25,7 +25,7 @@ SECRET_KEY = config_secret_base['django']['secret_key']
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['LongtermcareDepoly-env.eba-wtwti8hk.ap-northeast-2.elasticbeanstalk.com','www.well-care.co.kr','127.0.0.1']
+ALLOWED_HOSTS = ['*','www.well-care.co.kr','127.0.0.1']
 
 
 # Application definition
