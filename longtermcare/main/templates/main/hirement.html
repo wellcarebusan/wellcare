@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<title>웰케어-요양보호사 모집</title>
+<link rel="canonical" href="http://www.well-care.co.kr/hirement">
+<meta name="description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 요양보호사 모집 페이지입니다.">
+<meta name="keywords" content="해운대 방문요양, 해운대 재가복지, 방문요양, 재가복지, 부산, 웰케어, 웰케어재가복지, 노인장기요양보험, 요양보호사, 구인, 구직, 모집">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="웰케어-요양보호사 모집">
+<meta property="og:description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 요양보호사 모집 페이지입니다.">
+<meta property="og:image" content="http://www.well-care.co.kr/static/assets/img/gallery/1.jpg">
+
+{% block content %}
+
+<!-- ====================================
+  ———	BREADCRUMB
+  ===================================== -->
+<section class="breadcrumb-bg"
+    style="background-image: url({% static 'assets/img/background/page-title-bg-img.jpg' %});">
+    <div class="container">
+        <div class="breadcrumb-holder">
+            <div>
+                <h1 class="breadcrumb-title">요양보호사 수시모집</h1>
+                <ul class="breadcrumb breadcrumb-transparent">
+                    <li class="breadcrumb-item">
+                        <a class="text-white" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">hirement</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================
+———	ABOUT MEDIA
+===================================== -->
+<section class="py-3 py-md-7">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-xs-12">
+                <div><button class="btn btn-success">요양보호사 지원</button></div>
+                <pre></pre>
+                <form method="POST">{% csrf_token %}
+                    <label for="exampleFormControlInput1">성함</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="name" autocomplete="off">
+                    <pre></pre>
+                    <label for="exampleFormControlInput2">연락처</label>
+                    <input type="tel" class="form-control" id="exampleFormControlInput2" placeholder="-없이 입력해주세요." name="phone" autocomplete="off">
+                    <pre></pre>
+                    <label for="exampleFormControlInput3">주소</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="간단하게 동까지만 입력해주세요." name="address" autocomplete="off">
+                    <pre></pre>
+                    <div class="form-group check-step-gray">
+                        <label for="exampleFormControlSelect1">선호 근무시간</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="preferTime">
+                            <option value="오전">오전</option>
+                            <option value="오후">오후</option>
+                            <option value="무관">무관</option>
+                        </select>
+                    </div>
+                    {% if employee_form.errors %}
+                        {% for field in employee_form %}
+                            {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                <strong>{{field.label}}는 {{ error|escape }}</strong>
+                            </div>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                    <pre></pre><pre></pre>
+                    
+                    <a href="#" data-toggle="modal" class="form-control btn btn-info mb-2" data-target="#exampleModal">
+                       지원하기
+                    </a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">요양보호사 지원하기</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">×</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    지원하시겠습니까? <pre></pre>저장된 정보는 담당자만 확인할 수 있으며 일정 기간 보관됨을 알려드립니다.
+                                    개인정보 보관을 원하시지 않으면 상담 또는 유선으로 요청해주시면, 즉시 삭제처리 가능합니다.
+                                </div>
+                                <div class="modal-footer">
+                                    <a data-dismiss="modal">뒤로가기</a>
+                                    <input type="submit" value="지원하기">
+                    
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+                </form>
+                <pre></pre>
+            </div>
+            <div class="col-sm-8 col-xs-12">
+                <pre></pre>
+                <h2>지원자 현황</h2>
+                <p>※ 등록된 개인정보는 담당자만 확인 및 삭제할 수 있으며, 일정 기간 후 삭제처리됨을 알려드립니다.</p>
+                <div class="datatable table-responsive">
+                    <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                            <colgroup>
+                                <col width="50%" />
+                                <col width="25%" />
+                                <col width="25%" />
+                            </colgroup>
+                        <thead>
+                            <tr>
+                                <th>성 함</th>
+                                <th>확인</th>
+                                <th>삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for one_employee in all_employee %}
+                            <tr>
+                                <td style="text-align: center;">{{one_employee.name|slice:":1"}}*{{one_employee.name|slice:"-1:"}}</td>
+                                <td style="text-align: center;">
+                                    <a href="#" data-toggle="modal" data-target="#exampleModal1{{one_employee.id}}" style="color: blue;">
+                                        상세보기
+                                    </a>
+                                    <div class="modal fade" id="exampleModal1{{one_employee.id}}" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">지원자 상세보기</h5>
+                                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+                                                            aria-hidden="true">×</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    선택한 지원자의 상세정보를 확인하시겠습니까?
+                                                    <input type="password" id="pwvalue2">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a data-dismiss="modal">뒤로가기</a>
+                                                    <a href="javascript:void(window.open('{% url 'employee_detail' one_employee.id %}', '상세보기','location=no, directories=no,resizable=no,status=no,toolbar=no,menubar=no,top=200,left=300,width=300, height=150'))" id="detailtag" style="color: blue;">상세보기</a>
+                            
+                                                </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                </td>
+                                <td style="text-align: center;">
+                                    <a href="#" data-toggle="modal" data-target="#exampleModal{{one_employee.id}}">
+                                        삭제하기
+                                    </a>
+                                        <div class="modal fade" id="exampleModal{{one_employee.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">지원자 삭제하기</h5>
+                                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        선택한 지원자를 삭제하시겠습니까?
+                                                        <input type="password" id="pwvalue1">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a data-dismiss="modal">뒤로가기</a>
+                                                        <a href="{% url 'employee_delete' one_employee.id %}" id="deletetag">삭제하기</a>
+                                                    </div>
+                                                </div>        
+                                        </div>
+                                 </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section> 
+{% endblock %}

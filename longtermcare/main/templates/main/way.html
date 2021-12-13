@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+
+<title>웰케어재가노인복지센터-오시는길</title>
+<link rel="canonical" href="http://www.well-care.co.kr/intro/way">
+<meta name="description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 오시는길 페이지입니다.">
+<meta name="keywords" content="해운대 방문요양, 해운대 재가복지, 방문요양, 재가복지, 부산, 웰케어, 웰케어재가복지, 오시는길">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="웰케어재가노인복지센터-오시는길">
+<meta property="og:description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 오시는길 페이지입니다.">
+<meta property="og:image" content="http://www.well-care.co.kr/static/assets/img/gallery/1.jpg">
+
+{% endblock %}
+
+{% block content %}
+
+<!-- ====================================
+  ———	BREADCRUMB
+  ===================================== -->
+<section class="breadcrumb-bg"
+    style="background-image: url({% static 'assets/img/background/page-title-bg-img.jpg' %});">
+    <div class="container">
+        <div class="breadcrumb-holder">
+            <div>
+                <h1 class="breadcrumb-title">오시는 길</h1>
+                <ul class="breadcrumb breadcrumb-transparent">
+                    <li class="breadcrumb-item">
+                        <a class="text-white" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Way to come</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================
+———	ABOUT MEDIA
+===================================== -->
+<section class="py-8 py-md-7">
+    <div class="container">
+        <div class="mb-3">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <div class="media flex-md-column flex-lg-row mb-4">
+                        <div class="icon-rounded-circle-large shadow-sm mb-md-2 mr-md-0 mr-2 mr-lg-2 bg-warning">
+                            <i class="fa fa-map-marker text-white" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading text-warning mt-0 font-weight-bold mb-1">주소</h3>
+                            <p class="text-muted font-weight-medium" style="font-size: 1.1rem;line-height:0.7em;">해운대구 좌동순환로275</p>
+                            <p class="text-muted font-weight-medium" style="font-size: 1.1rem;line-height:0.7em;">상가 208호(대우2차아파트)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-12">
+                    <div class="media flex-md-column flex-lg-row mb-6">
+                        <div class="icon-rounded-circle-large shadow-sm mr-2 mb-md-2 mr-md-0 mr-lg-2 bg-success">
+                            <i class="fa fa-phone text-white" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading text-success mt-0 font-weight-bold mb-1">전화번호</h3>
+                            <a class="text-muted font-weight-medium" href="tel:0517479985" style="font-size: 1.4rem;">
+                                051) 747-9985
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-12">
+                    <div class="media flex-md-column flex-lg-row mb-3 mb-md-0">
+                        <div class="icon-rounded-circle-large shadow-sm mr-2 mb-md-2 mr-md-0 mr-lg-2 bg-danger">
+                            <i class="fa fa-envelope-o text-white" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading text-danger mb-1">이메일</h3>
+                            <p class="font-weight-medium">
+                                <a class="text-muted" href="mailto:hwoh09@naver.com" style="font-size: 1.3rem;">hwoh09@naver.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm-12 col-xs-12">
+                <div id="daumRoughmapContainer1598160837012" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%" >
+                </div>
+                <pre></pre>
+                <pre></pre>
+            </div>
+<!--    
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+<script charset="UTF-8" class="daum_roughmap_loader_script"
+    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<!-- 3. 실행 스크립트 -->
+<script charset="UTF-8">
+    new daum.roughmap.Lander({
+        "timestamp": "1598160837012",
+        "key": "2zqsj",
+        "mapHeight": "100%"
+    }).render();
+</script>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

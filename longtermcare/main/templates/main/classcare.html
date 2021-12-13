@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<title>웰케어-중산층케어</title>
+<link rel="canonical" href="http://www.well-care.co.kr/classcare">
+<meta name="description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 중산층케어 안내 페이지입니다.">
+<meta name="keywords" content="해운대 방문요양, 해운대 재가복지, 방문요양, 재가복지, 부산, 웰케어, 웰케어재가복지, 노인장기요양보험, 중산층케어">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="웰케어-중산층케어">
+<meta property="og:description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 중산층케어 안내 페이지입니다.">
+<meta property="og:image" content="http://www.well-care.co.kr/static/assets/img/gallery/1.jpg">
+
+{% block content %}
+
+
+<!-- ====================================
+  ———	BREADCRUMB
+  ===================================== -->
+<section class="breadcrumb-bg"
+    style="background-image: url({% static 'assets/img/background/page-title-bg-img.jpg' %});">
+    <div class="container">
+        <div class="breadcrumb-holder">
+            <div>
+                <h1 class="breadcrumb-title">중산층 비급여 돌봄서비스</h1>
+                <ul class="breadcrumb breadcrumb-transparent">
+                    <li class="breadcrumb-item">
+                        <a class="text-white" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">middleclass-care</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================
+———	ABOUT MEDIA
+===================================== -->
+<section class="py-3 py-md-7">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                    <div><button class="btn btn-success">대상</button></div>
+                    <pre></pre>
+                    <p class="text-dark font-size-17 mb-4" style="line-height:1.66em">노인장기요양법에 따라 장기요양등급을 받지 못한 일반인</p>
+                    <div><button class="btn btn-success">일상생활 맞춤동행 서비스</button></div>
+                    <pre></pre>
+                    <p class="text-dark font-size-17 mb-4" style="line-height:1.66em">일상생활에서 보호자의 도움이 필요하신 경우, 1:1 맞춤동행으로 고객님께서 안전하고 편안하게
+                        일상생활의 일을 처리하실 수 있도록 믿을 수 있는 전문가(사회복지사 또는 요양보호사)가 동행해 드리는 서비스입니다. 예배,
+                        미사, 법회 등의 “종교행사 동행”이나 미술관, 영화관등의 “취미생활 동행” “각종 모임참석”, “나들이 동행”, “여행” 등도 함께 해드리는 맞춤형 복지서비스를 제공합니다.</p>
+                    </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="image mb-4 mb-md-0">
+                    <pre></pre>
+                    <pre></pre>
+                    <img class="img-fluid rounded" src="{% static 'assets/img/features/classcare.jpg' %}" alt="features-img2.jpg">
+                </div>
+            </div>
+        </div>
+
+        <pre></pre>
+        <div><button class="btn btn-success">서비스 대상자</button></div>
+        <pre></pre>
+        <div>
+            <p class="text-dark font-size-17 mb-4" style="line-height:1.2rem">1. 가족과 함께 살지만, 가족이 모두 직장에 다녀서 어르신을 돌볼 사람이 없는 경우</p>
+            <p class="text-dark font-size-17 mb-4" style="line-height:1.2rem">2. 신체는 건강하지만, 동거인이 없어서 심적으로 불안정하고 도와줄 사람이 없는 경우</p>
+            <p class="text-dark font-size-17 mb-4" style="line-height:1.2rem">3. 노부부 가족단위로 간단한 가사와 케어가 필요한 경우</p>
+            <p class="text-dark font-size-17 mb-4" style="line-height:1.2rem">4. 자녀가 모두 출가해서 마음이 외롭거나 우울해서 말벗이 필요한 경우</p>
+            <p class="text-dark font-size-17 mb-4" style="line-height:1.2rem">5. 친자식처럼, 친구처럼 어디든지 함께 동행해 주길 원하는 경우</p>
+        </div>
+        <pre></pre>
+        <div><button class="btn btn-success">서비스 내용</button></div>
+        <pre></pre>
+        <div class="container">
+            <div class="table-responsive-sm table-cart">
+                <table class="table mb-0">
+                    <colgroup>
+                        <col width="20%" />
+                        <col width="80%" />
+                    </colgroup>
+                    <tr>
+                        <th scope="col">신체지원</th>
+                        <td>세면 도움, 구강 관리, 머리 감기기,
+                        몸단장, 옷 갈아 입히기, 목욕 도움
+                        식사 도움, 체위 변경
+                        이동 도움, 화장실 이동지원</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">가사지원</th>
+                        <td>취사, 식.재료 준비,
+                        반찬 준비, 식탁 청소
+                        청소 및 주변정돈, 내부정리</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">정서지원</th>
+                        <td>말벗, 격려, 생활 상담
+                        피트니스, 수지침, 발마사지,
+                        종교 생활 지원, 산책</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">개인사무지원</th>
+                        <td>장보기, 은행, 관공서,
+                        병원 방문 동행, 개인 업무 대행</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <pre></pre>
+        <div><button class="btn btn-success">서비스 비용</button></div>
+        <pre></pre>
+        <p class="text-dark font-size-17 mb-4" style="line-height:1.66em">
+        방문요양서비스 시간당 서비스비용에 준하나 시간과 내용에 따라 다를 수 있습니다.
+        </p>
+    </div>
+
+</section> 
+{% endblock %}

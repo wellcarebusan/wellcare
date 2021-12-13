@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+
+<title>웰케어재가노인복지센터-인사말</title>
+<link rel="canonical" href="http://www.well-care.co.kr/intro/greeting">
+<meta name="description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 인사말 페이지입니다.">
+<meta name="keywords" content="해운대 방문요양, 해운대 재가복지, 방문요양, 재가복지, 부산, 웰케어, 웰케어재가복지">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="웰케어재가노인복지센터-인사말">
+<meta property="og:description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 인사말 페이지입니다.">
+<meta property="og:image" content="http://www.well-care.co.kr/static/assets/img/gallery/1.jpg">
+
+{% endblock %}
+
+{% block content %}
+
+
+<!-- ====================================
+  ———	BREADCRUMB
+  ===================================== -->
+<section class="breadcrumb-bg" style="background-image: url({% static 'assets/img/background/page-title-bg-img.jpg' %});">
+    <div class="container">
+        <div class="breadcrumb-holder">
+            <div>
+                <h1 class="breadcrumb-title">인사말</h1>
+                <ul class="breadcrumb breadcrumb-transparent">
+                    <li class="breadcrumb-item">
+                        <a class="text-white" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================
+———	ABOUT MEDIA
+===================================== -->
+<section class="py-7 py-md-7">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-xs-12">
+                <div class="image mb-4 mb-md-0">
+                    <pre></pre>
+                    <img class="img-fluid rounded" src="{% static 'assets/img/features/features-img1.jpg' %}" alt="features-img1.jpg">
+                </div>
+            </div>
+            <div class="col-sm-9 col-xs-12">
+                <div>
+                    <div class="section-title mb-4">
+                    </div>
+                    <p class="text-dark font-size-17 mb-4"><b>안녕하십니까</b></p>
+                    <p class="text-dark font-size-17 mb-4"><b>웰케어 재가노인복지센터를 방문해주셔서 감사드립니다.</b></p>
+                    <p class="text-dark font-size-17 mb-4" style="line-height:1.66em"><b>우리나라도 곧 초고령사회로 접근하면서 많은 자녀분들이 어떻게 하면 부모님들의 노후생활을
+                    건강하고 행복하게 지낼 수 있을까 고민하고 계실것입니다.
+                    그동안 왕성하게 활동하실때는 큰 걱정이 없었지만 차츰 질병으로부터 자유롭지 못하여 병원신세를 져야 하고
+                        계속적으로 치료와 재활등이 필요한데 자식으로써 함께 할 수 없는 사정에서 저희 재가노인복지센터에서는 전문 요양보호사들이
+                        직접 방문하여 어르신의 신체활동, 가사활동, 개인활동지원 및 정서지원함으로써 가족 모두가 행복하고 평안한 삶을 영위할
+                        수 있도록 최대한 지원하고자 하는 노인장기요양기관입니다.</b></p>
+                    <pre></pre>
+                    <pre></pre>
+                    <pre></pre>
+                    <p class="text-dark font-size-20 mb-4" style="text-align: right;"><b>센터장 오 해 원</b></p>
+                    <pre></pre>
+                    <pre></pre>
+                    <pre></pre>
+                    <pre></pre>
+                    <pre></pre>
+                    <pre></pre>
+                    <pre></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

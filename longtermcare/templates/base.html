@@ -1,0 +1,328 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Site Tittle -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="naver-site-verification" content="6dee70043280a278869cd148a1d781ce2f5420ee" />
+    {% block extrahead %}
+    {% endblock %}
+    <!-- Plugins css Style -->
+    <link href="{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/plugins/no-ui-slider/nouislider.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/plugins/owl-carousel/owl.carousel.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'assets/plugins/owl-carousel/owl.theme.default.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'assets/plugins/fancybox/jquery.fancybox.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/plugins/isotope/isotope.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/plugins/animate/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/plugins/revolution/css/settings.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/plugins/revolution/css/layers.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/plugins/revolution/css/navigation.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,600,700|Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="{% static 'assets/css/kidz.css' %}" id="option_style" rel="stylesheet">
+    <link href="{% static 'assets/img/favicon.png' %}" rel="shortcut icon">
+
+</head>
+
+<body id="body" class="up-scroll">
+    <!-- ====================================
+  ——— PRELOADER
+  ===================================== -->
+    <div id="preloader" class="smooth-loader-wrapper">
+        <div class="smooth-loader">
+            <div class="loader">
+                <span class="dot dot-1"></span>
+                <span class="dot dot-2"></span>
+                <span class="dot dot-3"></span>
+                <span class="dot dot-4"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================
+  ——— HEADER
+  ===================================== -->
+    <header class="header" id="pageTop">
+        <!-- Top Color Bar -->
+        <div class="color-bars">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col color-bar bg-warning d-none d-md-block"></div>
+                    <div class="col color-bar bg-success d-none d-md-block"></div>
+                    <div class="col color-bar bg-danger d-none d-md-block"></div>
+                    <div class="col color-bar bg-info d-none d-md-block"></div>
+                    <div class="col color-bar bg-purple d-none d-md-block"></div>
+                    <div class="col color-bar bg-pink d-none d-md-block"></div>
+                    <div class="col color-bar bg-warning"></div>
+                    <div class="col color-bar bg-success"></div>
+                    <div class="col color-bar bg-danger"></div>
+                    <div class="col color-bar bg-info"></div>
+                    <div class="col color-bar bg-purple"></div>
+                    <div class="col color-bar bg-pink"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Bar-->
+        <!-- d-none d-md-block -->
+        <div class=" bg-stone  top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 d-none d-lg-block">
+                        <ul class="list-inline d-flex justify-content-xl-start align-items-center h-100 mb-0">
+                            <li>
+                                <span class="bg-warning icon-header mr-xl-2">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </span>
+                                <a href="mailto:hwon09@naver.com"
+                                    class="mr-lg-4 mr-xl-6 text-white opacity-80">hwoh09@naver.com</a>
+                            </li>
+                            <li>
+                                <span class="bg-success icon-header mr-xl-2">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </span>
+                                <a href="tel:+1 234 567 8900" class="mr-lg-4 mr-xl-6 text-white opacity-80">051) 747-9985</a>
+                            </li>
+                            <li class="text-white">
+                                <span class="bg-pink icon-header">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                </span>
+                                <span class="opacity-80">Open: 9am - 6pm</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-scrollUp navbar-sticky navbar-white">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img class="d-inline-block" src="{% static 'assets/img/logo.png' %}" alt="Kidz School">
+                </a>
+
+                <button class="navbar-toggler py-2" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item dropdown bg-warning">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-building nav-icon" aria-hidden="true"></i>
+                                <span>회사소개</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'greeting' %}"><b>인사말</b></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'status' %}"><b>기관현황</b></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'way' %}"><b>오시는길</b></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown bg-danger">
+                            <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button"
+                                data-toggle="dropdown">
+                                <i class="fa fa-file-text nav-icon" aria-hidden="true"></i>
+                                <span>노인장기요양보험</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'insurance' %}"><b>노인장기요양보험</b></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'enroll' %}"><b>장기요양인정신청</b></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'procedure' %}"><b>장기요양등급절차</b></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown bg-success">
+                            <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button" data-toggle="dropdown">
+                                <i class="fa fa-home nav-icon" aria-hidden="true"></i>
+                                <span>방문서비스</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'homecare' %}"><b>방문요양</b></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'wash' %}"><b>방문목욕</b></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown bg-info">
+                            <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button" data-toggle="dropdown">
+                                <i class="fa fa-universal-access nav-icon" aria-hidden="true"></i>
+                                <span>중산층 케어</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'classcare' %}"><b>중산층비급여 돌봄서비스</b></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown bg-purple">
+                            <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button" data-toggle="dropdown">
+                                <i class="fa fa-users nav-icon" aria-hidden="true"></i>
+                                <span>돌봄 서비스</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'allday' %}"><b>24시간 돌봄 서비스</b></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown bg-pink">
+                            <a class="nav-link dropdown-toggle " href="javascript:void(0)" role="button" data-toggle="dropdown">
+                                <i class="fa fa-user nav-icon" aria-hidden="true"></i>
+                                <span>요양보호사 모집</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item " href="{% url 'hirement' %}"><b>요양보호사 수시모집</b></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown bg-warning">
+                            <a class="nav-link dropdown-toggle " href="http://pf.kakao.com/_VySxbK/chat" role="button">
+                                <i class="fa fa-comment nav-icon" aria-hidden="true"></i>
+                                <span>카카오톡 상담</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-wrapper home">
+        {% block content %}
+        {% endblock %}
+    </div> <!-- element wrapper ends -->
+    <!-- ====================================
+      ———	FOOTER
+      ===================================== -->
+    <footer class="footer-bg-img">
+
+        <!-- Footer Color Bar -->
+        <div class="color-bar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col color-bar bg-warning"></div>
+                    <div class="col color-bar bg-danger"></div>
+                    <div class="col color-bar bg-success"></div>
+                    <div class="col color-bar bg-info"></div>
+                    <div class="col color-bar bg-purple"></div>
+                    <div class="col color-bar bg-pink"></div>
+                    <div class="col color-bar bg-warning d-none d-md-block"></div>
+                    <div class="col color-bar bg-danger d-none d-md-block"></div>
+                    <div class="col color-bar bg-success d-none d-md-block"></div>
+                    <div class="col color-bar bg-info d-none d-md-block"></div>
+                    <div class="col color-bar bg-purple d-none d-md-block"></div>
+                    <div class="col color-bar bg-pink d-none d-md-block"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Copy Right -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row py-4 align-items-center">
+                    <div class="col-sm-7 col-xs-12 order-1 order-md-0">
+                        <p class="copyright-text"> © Copyright 2020 웰케어 재가노인복지센터 All Rights Reserved</p>
+                    </div>
+
+                    <div class="col-sm-5 col-xs-12">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--scrolling-->
+    <div class="scrolling">
+        <a href="#pageTop" class="back-to-top" id="back-to-top" style="opacity: 1;">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <!-- Javascript -->
+    <script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/fancybox/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/isotope/isotope.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/syotimer/jquery.syotimer.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/select2/js/select2.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/no-ui-slider/nouislider.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/lazyestload/lazyestload.js' %}"></script>
+    <script src="{% static 'assets/plugins/velocity/velocity.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/images-loaded/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+
+    <!-- Load revolution slider only on Local File Systems. The following part can be removed on Server -->
+    <!--    <link href="{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script> 
+-->
+
+    <script src="{% static 'assets/plugins/wow/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/kidz.js' %}"></script>
+    <style>
+        /* Mobile 카카오톡 상담 버튼 스타일 */
+        .floBanMob1 {
+            position: fixed;
+            bottom: 130px;
+            /* 아래 끝에서부터의 거리 */
+            right: 15px;
+            /* 오른쪽 끝에서부터의 거리 */
+            z-index: 999;
+        }
+    
+        /* Mobile 전화상담 버튼 스타일 */
+        .floBanMob2 {
+            position: fixed;
+            bottom: 80px;
+            /* 아래 끝에서부터의 거리 */
+            right: 15px;
+            /* 오른쪽 끝에서부터의 거리 */
+            z-index: 999;
+        }
+    </style>
+    <!-- Mobile 카카오톡 상담 버튼 표시 -->
+    <div class="floBanMob1 hidden-lg">
+        <a href="http://pf.kakao.com/_VySxbK/chat">
+            <img src="https://cdn.imweb.me/upload/S201707025957d259d421f/5d81891495bcc.png" width="50px" height="50px">
+        </a>
+    </div>
+    <!-- Mobile 전화상담 버튼 표시 -->
+    <div class="floBanMob2 hidden-lg">
+        <a href="tel:051-747-9985">
+            <img src="https://cdn.imweb.me/upload/S201707025957d259d421f/4aecbbc74550b.png" width="50px" height="50px">
+        </a>
+    </div>
+</body>
+
+</html>

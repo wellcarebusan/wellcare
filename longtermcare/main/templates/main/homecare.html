@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+
+<title>웰케어-방문요양</title>
+<link rel="canonical" href="http://www.well-care.co.kr/homecare">
+<meta name="description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 방문요양 안내 페이지입니다.">
+<meta name="keywords" content="해운대 방문요양, 해운대 재가복지, 방문요양, 재가복지, 부산, 웰케어, 웰케어재가복지, 노인장기요양보험">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="웰케어-방문요양">
+<meta property="og:description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 방문요양 안내 페이지입니다.">
+<meta property="og:image" content="http://www.well-care.co.kr/static/assets/img/gallery/1.jpg">
+
+{% endblock %}
+
+{% block content %}
+
+
+<!-- ====================================
+  ———	BREADCRUMB
+  ===================================== -->
+<section class="breadcrumb-bg"
+    style="background-image: url({% static 'assets/img/background/page-title-bg-img.jpg' %});">
+    <div class="container">
+        <div class="breadcrumb-holder">
+            <div>
+                <h1 class="breadcrumb-title">방문요양</h1>
+                <ul class="breadcrumb breadcrumb-transparent">
+                    <li class="breadcrumb-item">
+                        <a class="text-white" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">homecare</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================
+———	ABOUT MEDIA
+===================================== -->
+<section class="py-3 py-md-7">
+    <div class="container">
+        <p class="text-dark font-size-17 mb-4" style="line-height:1.66em">전문적인 교육을 받은 요양보호사가 가정을 방문하여 보호가 필요한 어르신께 전문적인 요양관련 서비스를 제공해 드리는 서비스입니다. 
+        방문간호와 일부 중복되는 부분이 있으나 서비스의 내용이 주로 보호인의 간호보다는 요양분야에 맞추어져 있습니다.</p>
+        <p class="text-dark font-size-17 mb-4" style="line-height:1.66em"> ※ 단, 수급자에게 제공되는 요양서비스와 직접 관련이 없는 가사 등의 관련 업무는 제외됩니다.
+        </p>
+        <div><button class="btn btn-success">제공 방문요양서비스</button></div>
+        <pre></pre>
+        <pre></pre>
+    </div>
+            <div class="container">
+                <div class="table-responsive-sm table-cart">
+                    <table class="table mb-0">
+                        <colgroup>
+                            <col width="20%" />
+                            <col width="22%" />
+                            <col width="58%" />
+                        </colgroup>
+                            <tr>
+                                <th scope="col" rowspan=11><span style="font-size: 1.4rem;"> 신체활동지원</span></th>
+                                <td style="padding-left: 30px;"><b>세면도움</b></td>
+                                <td>얼굴과 목, 손 씻기 등, 사용 물품 정리, 세면대까지의 이동 포함</td>
+                            </tr>
+                            <tr>
+                                <td><b>구강관리</b></td>
+                                <td>구강청결(양치질 등), 양치 지켜보기, 가글액ㆍ물 양치, 틀니손질, 필요물품 준비 및 사용물품의 정리</td>
+                            </tr>
+                            <tr>
+                                <td><b>머리감기기</b></td>
+                                <td>세면대까지의 이동보조 포함, 머리감기, 머리 말리기, 필요물품 준비 및 사용물품의 정리</td>
+                            </tr>
+                            <tr>
+                                <td><b>몸단장</b></td>
+                                <td>머리단장, 손발톱 깎기, 면도, 면도지켜 보기, 화장하기, 필요물품 준비 및 사용물품의 정리</td>
+                            </tr>
+                            <tr>
+                                <td><b>옷 입히기</b></td>
+                                <td>의복준비(양말, 신발 포함), 지켜보기 및 지도, 겉옷 및 속옷 갈아입히기, 의복정리</td>
+                            </tr>
+                            <tr>
+                                <td><b>목욕도움</b></td>
+                                <td>입욕준비, 입욕 시 이동보조, 몸 씻기(샤워 포함), 옷갈아입히기, 사용물품 정리</td>
+                            </tr>
+                            <tr>
+                                <td><b>식사도움</b></td>
+                                <td>식사 차리기, 식사보조, 경관영양실시, 구토물 정리</td>
+                            </tr>
+                            <tr>
+                                <td><b>체위변경</b></td>
+                                <td>체위변경, 일어나 앉기 도움</td>
+                            </tr>
+                            <tr>
+                                <td><b>이동도움</b></td>
+                                <td>침대에서 휠체어로 옮겨 타기, 집안내 걷기 또는 보행도움, 산책</td>
+                            </tr>
+                            <tr>
+                                <td><b>신체기능의 유지ㆍ증진</b></td>
+                                <td>관절구축 예방활동, 보행, 서있기 연습 보조, 기구사용 운동보조, 보장구 장치 도움</td>
+                            </tr>
+                            <tr>
+                                <td><b>화장실이용</b></td>
+                                <td>화장실 이동지원, 배뇨ㆍ배변도움, 지켜보기, 기저귀 교환, 용변 후 처리지원, 필요물품 준비 및 사용물품의 정리</td>
+                            </tr>
+                            <tr>
+                                <th scope="col" rowspan=3><span style="font-size: 1.4rem;">일상활동지원</span></th>
+                                <td style="padding-left: 30px;"><b>취사</b></td>
+                                <td>식ㆍ재료의 준비, 밥 짓기, 국ㆍ반찬하기, 식탁청소, 설거지, 행주 삶기, 음식물쓰레기 분리수거 등</td>
+                            </tr>
+                            <tr>
+                                <td><b>청소 및 주변정돈</b></td>
+                                <td>급여대상자가 주로 거주하는 장소(방, 거실), 화장실청소, 쓰레기 분리수거, 내부정리, 이부자리 정돈, 화장대ㆍ책장정리, 옷장ㆍ서랍장 등 정리</td>
+                            </tr>
+                            <tr>
+                                <td><b>세탁</b></td>
+                                <td>급여대상자의 옷, 양말, 수건, 침구류, 걸레 등 세탁과 삶기 등</td>
+                            </tr>
+                            <tr>
+                                <th scope="col" rowspan=2><span style="font-size: 1.4rem;">개인활동지원</span></th>
+                                <td style="padding-left: 30px;"><b>외출 시 동행</b></td>
+                                <td>산책, 장보기, 은행, 관공서, 병원 등 방문 시 부축 또는 동행(차량 이용 포함)하고 책임 귀가</td>
+                            </tr>
+                            <tr>
+                                <td><b>일상업무 대행</b></td>
+                                <td>급여대상자가 원하는 식료품구매와 은행ㆍ관공서 업무대행, 병원 약타오기 등</td>
+                            </tr>
+                            <tr>
+                                <th scope="col" rowspan=2><span style="font-size: 1.4rem;">정서지원</span></th>
+                                <td style="padding-left: 30px;"><b>말벗, 격려 및 위로</b></td>
+                                <td>안부확인을 위한 방문, 말벗, 격려</td>
+                            </tr>
+                            <tr>
+                                <td><b>생활상담</b></td>
+                                <td>생활상의 문제 등 상담 및 조언   </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+</section> 
+{% endblock %}

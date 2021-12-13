@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+
+<title>웰케어재가노인복지센터-기관현황</title>
+<link rel="canonical" href="http://www.well-care.co.kr/intro/status">
+<meta name="description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 기관현황 페이지입니다.">
+<meta name="keywords" content="해운대 방문요양, 해운대 재가복지, 방문요양, 재가복지, 부산, 웰케어, 웰케어재가복지, 기관현황">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="웰케어재가노인복지센터-기관현황">
+<meta property="og:description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 기관현황 페이지입니다.">
+<meta property="og:image" content="http://www.well-care.co.kr/static/assets/img/gallery/1.jpg">
+
+{% endblock %}
+
+{% block content %}
+
+<!-- ====================================
+  ———	BREADCRUMB
+  ===================================== -->
+<section class="breadcrumb-bg"
+    style="background-image: url({% static 'assets/img/background/page-title-bg-img.jpg' %});">
+    <div class="container">
+        <div class="breadcrumb-holder">
+            <div>
+                <h1 class="breadcrumb-title">기관현황</h1>
+                <ul class="breadcrumb breadcrumb-transparent">
+                    <li class="breadcrumb-item">
+                        <a class="text-white" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Status</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-3 py-md-8">
+        <div class="container">
+            <div class="table-responsive-sm table-cart">
+                <table class="table mb-0">
+                    <colgroup>
+                        <col width="20%" />
+                        <col width="80%" />
+                    </colgroup>
+                    <tr>
+                        <th scope="col">기관명</th>
+                        <td>웰케어 재가노인복지센터</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">유형</th>
+                        <td>재가장기요양기관</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">시설장</th>
+                        <td>오 해 원</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">주요 서비스</th>
+                        <td>방문요양,방문목욕,중산층케어, 24시간 간병인 돌봄</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">서비스대상</th>
+                        <td>요양 1,2,3,4,5 등급 및 일반비급여대상자</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">대표 전화</th>
+                        <td>051)747-9985</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">FAX</th>
+                        <td>051)747-9984</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">이메일</th>
+                        <td>hwoh09@naver.com</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">웹주소</th>
+                        <td>http://www.well-care.co.kr</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">설립 년월일</th>
+                        <td>2019년 10월10일</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">직원</th>
+                        <td>사회복지사, 20여명 요양보호사</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">주소</th>
+                        <td>부산광역시 해운대구 좌동순환로275, 상가 208호(좌동, 대우2차아파트)</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</section>
+
+{% endblock %}

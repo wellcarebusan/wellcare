@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+
+<title>웰케어-방문목욕</title>
+<link rel="canonical" href="http://www.well-care.co.kr/homecare/wash">
+<meta name="description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 방문목욕 안내 페이지입니다.">
+<meta name="keywords" content="해운대 방문요양, 해운대 재가복지, 방문요양, 재가복지, 부산, 웰케어, 웰케어재가복지, 노인장기요양보험, 방문목욕">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="웰케어-방문목욕">
+<meta property="og:description" content="부산광역시 해운대구 좌동에 위치한 방문요양, 재가복지 서비스를 제공하는 웰케어재가복지센터의 방문목욕 안내 페이지입니다.">
+<meta property="og:image" content="http://www.well-care.co.kr/static/assets/img/gallery/1.jpg">
+
+{% endblock %}
+
+{% block content %}
+
+
+<!-- ====================================
+  ———	BREADCRUMB
+  ===================================== -->
+<section class="breadcrumb-bg"
+    style="background-image: url({% static 'assets/img/background/page-title-bg-img.jpg' %});">
+    <div class="container">
+        <div class="breadcrumb-holder">
+            <div>
+                <h1 class="breadcrumb-title">방문목욕</h1>
+                <ul class="breadcrumb breadcrumb-transparent">
+                    <li class="breadcrumb-item">
+                        <a class="text-white" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">homecare-wash</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================================
+———	ABOUT MEDIA
+===================================== -->
+<section class="py-3 py-md-7">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 col-xs-12">
+            <div><button class="btn btn-success">서비스 안내</button></div>
+            <pre></pre>
+            <p class="text-dark font-size-17 mb-4" style="line-height:1.66rem">방문목욕 서비스는 전교육을 받은 요양보호사 2명이 가정을 방문하여 가정욕실에 비치된 욕조나 이동식 목욕장비를 갖추어 자립이 어려운 어르신들을 도와 목욕서비스를 제공함으로써 어르신들의 자립생활을 돕고 신체적 청결과
+            근육경축예방, 심신기능향을 을 높혀주는 서비스입니다.</p>
+            <pre></pre>
+            <div><button class="btn btn-success">서비스 대상자</button></div>
+            <pre></pre>
+            <p class="text-dark font-size-17 mb-4" style="line-height:1.66rem">노인장기요양법에 의거 장기요양신청을 하여 국민건강보험공단으로부터 대상등급(1~5등급)의 ‘장기요양인정서’를 받으신 분</p>
+            <pre></pre>
+            </div>
+            <div class="col-sm-5 col-xs-12">
+                <pre></pre>
+                <img class="img-fluid rounded" src="{% static 'assets/img/features/homecare.jpg' %}" alt="features-img2.jpg">
+                <pre></pre>
+                <pre></pre>
+            </div>
+        </div>
+            <div><button class="btn btn-success">서비스 내용</button></div>
+            <pre></pre>
+            <p class="text-dark font-size-17 mb-4" style="line-height:1.66rem">목욕준비, 목욕실시(몸씻기기,머리감기,얼굴씻기 포함), 목욕후 옷 갈아입히기, 배설처리, 목욕전후
+                상태의 관찰 및 측정</p>
+            <pre></pre>
+    </div>
+
+</section> 
+{% endblock %}
